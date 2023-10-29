@@ -1,0 +1,114 @@
+MiniWindow
+  id: preyWidget
+  !text: tr('Prey')
+  height: 150
+  icon: /images/game/prey/prey_inactive
+  @onClose: modules.game_prey.onMiniWindowClose()
+  &save: true
+
+  MiniWindowContents
+    padding-top: 5
+    padding-left: 5
+    padding-right: 5
+    padding-bottom: 5
+
+    UICreature
+      id: preyCreatureOutfit1
+      anchors.top: parent.top
+      anchors.left: parent.left
+      width: 16
+      height: 16
+      margin-top: 3
+
+    UIItem
+      id: preyBonus1
+      anchors.left: preyCreatureOutfit1.right
+      anchors.top: parent.top
+      margin-left: 5
+      margin-top: 3
+
+    Label
+      id: preyMonsterName1
+      anchors.left: preyBonus1.right
+      anchors.top: parent.top
+      anchors.right: parent.right
+      margin-left: 5
+
+    ProgressBar
+      id: preyProgressBar1
+      height: 5
+      anchors.left: preyBonus1.right
+      anchors.top: preyMonsterName1.bottom
+      anchors.right: parent.right
+      margin-left: 5
+      margin-top: 2
+
+    UICreature
+      id: preyCreatureOutfit2
+      anchors.top: preyCreatureOutfit1.bottom
+      anchors.left: parent.left
+      width: 16
+      height: 16
+      margin-top: 7
+
+    UIItem
+      id: preyBonus2
+      anchors.left: preyCreatureOutfit2.right
+      anchors.top: preyProgressBar1.bottom
+      margin-left: 5
+      margin-top: 6
+
+    Label
+      id: preyMonsterName2
+      anchors.left: preyBonus2.right
+      anchors.top: preyProgressBar1.bottom
+      anchors.right: parent.right
+      margin-left: 5
+      margin-top: 3
+
+    ProgressBar
+      id: preyProgressBar2
+      height: 5
+      anchors.left: preyBonus2.right
+      anchors.top: preyMonsterName2.bottom
+      anchors.right: parent.right
+      margin-left: 5
+      margin-top: 2
+
+    UICreature
+      id: preyCreatureOutfit3
+      anchors.top: preyCreatureOutfit2.bottom
+      anchors.left: parent.left
+      width: 16
+      height: 16
+      margin-top: 7
+
+    UIItem
+      id: preyBonus3
+      anchors.left: preyCreatureOutfit3.right
+      anchors.top: preyProgressBar2.bottom
+      margin-left: 5
+      margin-top: 6
+
+    Label
+      id: preyMonsterName3
+      anchors.left: preyBonus3.right
+      anchors.top: preyMonsterName2.bottom
+      anchors.right: parent.right
+      margin-left: 5
+      margin-top: 9
+
+    ProgressBar
+      id: preyProgressBar3
+      height: 5
+      anchors.left: preyBonus3.right
+      anchors.top: preyMonsterName3.bottom
+      anchors.right: parent.right
+      margin-left: 5
+      margin-top: 2
+
+  MiniBroder
+    anchors.left: parent.left
+    anchors.bottom: parent.bottom
+    margin-bottom: 2
+    margin-left: 2
